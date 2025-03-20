@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Projects
 subtitle: Check out my Projects here!
 ---
