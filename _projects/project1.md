@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Project Title"
-date: YYYY-MM-DD
+date: 2025-03-20
 description: "Brief description of the project."
 image: /assets/images/project-thumbnail.jpg
 tags: [Tag1, Tag2]
