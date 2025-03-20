@@ -51,8 +51,8 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "omarklotfy@gmail.com"
-  github: "https://github.com/Omarkh98"
-  linkedin: "https://www.linkedin.com/in/omar-lotfy-12240b198/"
+  github: "Omarkh98"
+  linkedin: "omar-lotfy-12240b198/"
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
