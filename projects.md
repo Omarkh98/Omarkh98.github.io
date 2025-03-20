@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Projects"
+title: Projects
+subtitle: Check out my Projects here!
 ---
 
-<h1>{{ page.title }}</h1>
 <div class="projects-list">
   {% for project in site.projects %}
     <div class="project-item">
