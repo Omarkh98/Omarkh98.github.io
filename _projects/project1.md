@@ -1,10 +1,13 @@
 ---
-layout: project
-title: "Project Title"
+layout: post
 date: 2025-03-20
-description: "Brief description of the project."
-image: /assets/images/project-thumbnail.jpg
+title: NLP Text Summarizer
+subtitle: Excerpt from Soulshaping by Jeff Brown
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
 tags: [Tag1, Tag2]
+author: Sharon Smith and Barry Simpson
 ---
 
 ## Overview
