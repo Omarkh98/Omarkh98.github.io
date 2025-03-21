@@ -5,76 +5,150 @@ title: Projects
 
 {{ content }}
 
-<!-- Projects List Container -->
-<div class="projects-container">
-  <ul class="projects-list list-unstyled" role="list">
-    {% for project in site.projects %}
-    <li class="project-preview card">
-      <article>
-        
-        <!-- Project Thumbnail -->
-        {%- capture thumbnail -%}
-          {% if project.thumbnail-img %}
-            {{ project.thumbnail-img }}
-          {% elsif project.cover-img %}
-            {% if project.cover-img.first %}
-              {{ project.cover-img[0].first.first }}
-            {% else %}
-              {{ project.cover-img }}
-            {% endif %}
+<!-- Projects Grid Container -->
+<div class="projects-grid">
+  {% for project in site.projects %}
+  <div class="project-card">
+    <article>
+      
+      <!-- Project Thumbnail -->
+      {%- capture thumbnail -%}
+        {% if project.thumbnail-img %}
+          {{ project.thumbnail-img }}
+        {% elsif project.cover-img %}
+          {% if project.cover-img.first %}
+            {{ project.cover-img[0].first.first }}
+          {% else %}
+            {{ project.cover-img }}
           {% endif %}
-        {% endcapture %}
-        {% assign thumbnail = thumbnail | strip %}
-
-        {% if thumbnail != "" %}
-        <div class="project-image">
-          <a href="{{ project.url | absolute_url }}" aria-label="Thumbnail">
-            <img src="{{ thumbnail | absolute_url }}" alt="Project thumbnail">
-          </a>
-        </div>
         {% endif %}
+      {% endcapture %}
+      {% assign thumbnail = thumbnail | strip %}
 
-        <!-- Project Title & Subtitle -->
-        <div class="project-details">
-          <a href="{{ project.url | absolute_url }}">
-            <h2 class="project-title">{{ project.title | strip_html }}</h2>
-            {% if project.subtitle %}
-              <h3 class="project-subtitle">{{ project.subtitle | strip_html }}</h3>
-            {% endif %}
-          </a>
-        </div>
+      {% if thumbnail != "" %}
+      <div class="project-thumbnail">
+        <a href="{{ project.url | absolute_url }}" aria-label="Thumbnail">
+          <img src="{{ thumbnail | absolute_url }}" alt="Project thumbnail">
+        </a>
+      </div>
+      {% endif %}
 
-        <!-- Project Meta (Date) -->
-        <p class="project-meta">
-          {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-          <strong>Created on:</strong> {{ project.date | date: date_format }}
-        </p>
-
-        <!-- Project Excerpt -->
-        <div class="project-entry">
-          {% assign excerpt_length = site.excerpt_length | default: 50 %}
-          {{ project.excerpt | strip_html | truncatewords: excerpt_length }}
-          {% assign excerpt_word_count = project.excerpt | number_of_words %}
-          {% if project.content != project.excerpt or excerpt_word_count > excerpt_length %}
-            <a href="{{ project.url | absolute_url }}" class="project-read-more">[Read&nbsp;More]</a>
+      <!-- Project Title & Subtitle -->
+      <div class="project-info">
+        <a href="{{ project.url | absolute_url }}">
+          <h2 class="project-title">{{ project.title | strip_html }}</h2>
+          {% if project.subtitle %}
+            <h3 class="project-subtitle">{{ project.subtitle | strip_html }}</h3>
           {% endif %}
-        </div>
+        </a>
+      </div>
 
-        <!-- Project Tags -->
-        {% if project.tags.size > 0 %}
-        <div class="project-tags">
-          <strong>Tags:</strong>
-          <ul class="d-inline list-inline" role="list">
-            {% for tag in project.tags %}
-            <li class="list-inline-item">
-              <a href="{{ '/tags' | absolute_url }}#{{- tag -}}" class="tag">#{{- tag -}}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
+      <!-- Project Meta (Date) -->
+      <p class="project-meta">
+        <strong>Created on:</strong> {{ project.date | date: "%B %-d, %Y" }}
+      </p>
+
+      <!-- Project Excerpt -->
+      <div class="project-description">
+        {% assign excerpt_length = site.excerpt_length | default: 50 %}
+        {{ project.excerpt | strip_html | truncatewords: excerpt_length }}
+        {% assign excerpt_word_count = project.excerpt | number_of_words %}
+        {% if project.content != project.excerpt or excerpt_word_count > excerpt_length %}
+          <a href="{{ project.url | absolute_url }}" class="read-more">Read More</a>
         {% endif %}
-      </article>
-    </li>
-    {% endfor %}
-  </ul>
+      </div>
+
+      <!-- Project Tags -->
+      {% if project.tags.size > 0 %}
+      <div class="project-tags">
+        <strong>Tags:</strong>
+        <ul class="tags-list">
+          {% for tag in project.tags %}
+          <li>
+            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">#{{- tag -}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </article>
+  </div>
+  {% endfor %}
 </div>
+
+<!-- Custom Styles -->
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  .project-thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  .project-info {
+    padding: 15px;
+    text-align: center;
+  }
+  .project-title {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .project-meta {
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+  }
+  .project-description {
+    padding: 0 15px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  .project-tags {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    background: #f9f9f9;
+  }
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  .tags-list li a {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .tags-list li a:hover {
+    background: #0056b3;
+  }
+</style>
