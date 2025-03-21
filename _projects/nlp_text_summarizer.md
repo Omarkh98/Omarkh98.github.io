@@ -29,4 +29,4 @@ This project focuses on building and deploying an **NLP-based text summarization
 This tool successfully enables **efficient and scalable text summarization**, making it useful for applications like news aggregation, document analysis, and content generation.
 
 ---
-🚀 [View on GitHub](#) | 📫 [Contact Me](mailto:omarklotfy@gmail.com)
+🚀 [View on GitHub](https://github.com/Omarkh98/NLP-Text-Summarizer)
