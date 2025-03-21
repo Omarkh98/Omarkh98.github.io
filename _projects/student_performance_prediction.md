@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Student Performance Prediction
 subtitle: Predicting student performance using machine learning
 cover-img: [Add cover Img]
