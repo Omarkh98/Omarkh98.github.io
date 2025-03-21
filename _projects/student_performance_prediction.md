@@ -29,4 +29,4 @@ This project focuses on developing an end-to-end machine learning application th
 The project successfully demonstrated how machine learning can predict student performance based on historical data, providing valuable insights for educators and institutions.
 
 ---
-🚀 [View on GitHub](#) | 📫 [Contact Me](mailto:omarklotfy@gmail.com)
+🚀 [View on GitHub](https://github.com/Omarkh98/mlproject)
