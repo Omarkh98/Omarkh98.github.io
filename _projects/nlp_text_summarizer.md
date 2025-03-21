@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: NLP Text Summarizer
 subtitle: Generating concise summaries from large textual data
 cover-img: [Add cover Img]
