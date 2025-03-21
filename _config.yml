@@ -22,7 +22,7 @@ remote_theme: daattali/beautiful-jekyll@6.0.1
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  # About Me: "aboutme"
   Blog: "blog"
   Projects: "projects"
 
