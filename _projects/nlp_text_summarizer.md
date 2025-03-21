@@ -1,24 +1,32 @@
 ---
 layout: post
-date: 2025-03-20
 title: NLP Text Summarizer
-subtitle: Excerpt from Soulshaping by Jeff Brown
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
-tags: [Tag1, Tag2]
-author: Sharon Smith and Barry Simpson
+subtitle: Generating concise summaries from large textual data
+cover-img: [Add cover Img]
+thumbnail-img: [Add Thumbnail Image]
+share-img: [Add Share Image]
+tags: [NLP, Machine Learning, FastAPI, AWS, Transformers]
 ---
 
 ## Overview
-Detailed information about the project.
+This project focuses on building and deploying an **NLP-based text summarization tool** to generate concise summaries from extensive textual content.
 
-## Features
-- Feature 1
-- Feature 2
-- Feature 3
+## Key Features
+- **Natural Language Processing (NLP):** Applied techniques like tokenization, stopword removal, and TF-IDF for feature extraction.
+- **Summarization Methods:** Implemented both **extractive** (key sentence selection) and **abstractive** (semantic-based) summarization approaches.
+- **Libraries & Models:** Utilized **NLTK** for preprocessing and **Hugging Face’s Transformers** for deep learning-based summarization.
+- **Evaluation Metrics:** Measured performance using **ROUGE score** to optimize accuracy.
+- **FastAPI Backend:** Built a REST API to serve the summarization model efficiently.
+- **Deployment:** Hosted the application on **AWS** with a **CI/CD pipeline** for automated updates and real-time summarization.
 
-## Technologies Used
-- Technology 1
-- Technology 2
-- Technology 3
+## Tech Stack
+- **Programming:** Python
+- **Libraries:** NLTK, Transformers (Hugging Face), Scikit-learn
+- **Backend:** FastAPI
+- **Deployment:** AWS (CI/CD)
+
+## Outcome
+This tool successfully enables **efficient and scalable text summarization**, making it useful for applications like news aggregation, document analysis, and content generation.
+
+---
+🚀 [View on GitHub](#) | 📫 [Contact Me](mailto:omarklotfy@gmail.com)
