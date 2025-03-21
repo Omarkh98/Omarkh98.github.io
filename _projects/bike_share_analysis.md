@@ -29,4 +29,3 @@ This project is part of the **Google Data Analytics Capstone**, where I analyzed
 The analysis provided actionable insights to **improve bike-share service strategies**, such as **promotional offers for casual riders** and **optimized fleet distribution** based on peak usage times.
 
 ---
-🚀 [View on GitHub](#)
