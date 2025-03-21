@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Bike-Share Analysis
 subtitle: Understanding ride patterns to optimize bike-sharing services
 cover-img: [Add cover Img]
