@@ -2,9 +2,9 @@
 layout: project
 title: Bike-Share Analysis
 subtitle: Understanding ride patterns to optimize bike-sharing services
-cover-img: [Add cover Img]
-thumbnail-img: [Add Thumbnail Image]
-share-img: [Add Share Image]
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
 tags: [Data Analysis, SQL, R, Visualization, Google Data Analytics]
 ---
 
