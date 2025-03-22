@@ -2,6 +2,7 @@
 layout: project
 title: Bike-Share Analysis
 subtitle: Understanding ride patterns to optimize bike-sharing services
+excerpt: This project is part of the **Google Data Analytics Capstone**, where I analyzed bike-share data to uncover key patterns and insights.
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
