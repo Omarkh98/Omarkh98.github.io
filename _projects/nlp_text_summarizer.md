@@ -2,6 +2,7 @@
 layout: project
 title: NLP Text Summarizer
 subtitle: Generating concise summaries from large textual data
+excerpt: This project focuses on building and deploying an NLP-based text summarization tool to generate concise summaries from extensive textual content
 cover-img: [Add cover Img]
 thumbnail-img: [Add Thumbnail Image]
 share-img: [Add Share Image]
