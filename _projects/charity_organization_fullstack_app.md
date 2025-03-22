@@ -2,6 +2,7 @@
 layout: project
 title: Charity Organization Full Stack Application
 subtitle: A comprehensive web solution for managing charity operations
+excerpt: This project involved developing a full-stack web application to streamline charity organization operations, improving efficiency in donation tracking, event management, and user coordination
 cover-img: [Add cover Img]
 thumbnail-img: [Add Thumbnail Image]
 share-img: [Add Share Image]
