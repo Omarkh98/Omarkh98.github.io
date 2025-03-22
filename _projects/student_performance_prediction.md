@@ -2,6 +2,7 @@
 layout: project
 title: Student Performance Prediction
 subtitle: Predicting student performance using machine learning
+excerpt: This project focuses on developing an end-to-end machine learning application that predicts student performance based on previous academic records
 cover-img: [Add cover Img]
 thumbnail-img: [Add Thumbnail Image]
 share-img: [Add Share Image]
