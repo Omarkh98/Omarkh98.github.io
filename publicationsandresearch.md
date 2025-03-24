@@ -4,22 +4,32 @@ title: Publications & Research
 subtitle: Check out my Publications and Research
 ---
 
-## 📚 Publications
+## 📚 Publications  
 
-### **1. Automatic Classification of Preliminary Diabetic Retinopathy Stages using CNN**  
-📅 *Published in:* The Science and Information (SAI) Organization – April 1, 2021  
-🔗 [Read the Paper](https://thesai.org/Publications/ViewPaper?Volume=12&Issue=2&Code=IJACSA&SerialNo=89)  
+> *Explore my contributions to AI and medical imaging research.*  
 
-A deep learning-based approach leveraging **Convolutional Neural Networks (CNNs)** for the **automatic classification** of diabetic retinopathy stages, aiding early detection and diagnosis.  
+### 🏆 **Automatic Classification of Preliminary Diabetic Retinopathy Stages using CNN**  
+📅 *Published in:* **The Science and Information (SAI) Organization** – *April 1, 2021*  
+📖 *Focus:* Deep learning-based **CNN model** for early-stage **diabetic retinopathy detection**.  
+🔗 **[Read the Paper](https://thesai.org/Publications/ViewPaper?Volume=12&Issue=2&Code=IJACSA&SerialNo=89) 📄**  
 
----
-
-### **2. Cascaded Architecture for Classifying the Preliminary Stages of Diabetic Retinopathy**  
-📅 *Published in:* Association for Computing Machinery (ACM) – January 5, 2021  
-🔗 [Read the Paper](https://dl.acm.org/doi/10.1145/3436829.3436854)  
-
-This research presents a **cascaded deep learning architecture** to improve classification accuracy for **early-stage diabetic retinopathy**, using a hierarchical approach for **better feature extraction** and **progression analysis**.  
+📝 **Summary:**  
+- Designed a **Convolutional Neural Network (CNN)** to classify diabetic retinopathy stages from retinal images.  
+- Achieved **high classification accuracy**, aiding early diagnosis and treatment.  
+- Improved **feature extraction and model generalization** using data augmentation and fine-tuning.  
 
 ---
 
-🔍 *More research coming soon!* 🚀
+### 🏅 **Cascaded Architecture for Classifying the Preliminary Stages of Diabetic Retinopathy**  
+📅 *Published in:* **Association for Computing Machinery (ACM)** – *January 5, 2021*  
+📖 *Focus:* Hierarchical deep learning **cascaded model** for **progression analysis** of diabetic retinopathy.  
+🔗 **[Read the Paper](https://dl.acm.org/doi/10.1145/3436829.3436854) 📄**  
+
+📝 **Summary:**  
+- Introduced a **cascaded deep learning model** to classify diabetic retinopathy stages with enhanced precision.  
+- Utilized **feature extraction layering**, allowing **progression tracking** in patient diagnosis.  
+- Optimized training using **pretrained architectures and ensemble learning** techniques.  
+
+---
+
+✨ *More research coming soon... Stay tuned!* 🚀  
