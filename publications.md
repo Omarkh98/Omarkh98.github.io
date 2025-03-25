@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-subtitle: Explore my contributions to AI and medical imaging research
+subtitle: Explore my contributions to AI and medical imaging
 ---
 
 ### 🏆 **Automatic Classification of Preliminary Diabetic Retinopathy Stages using CNN**  
