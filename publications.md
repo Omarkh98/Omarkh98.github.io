@@ -1,12 +1,8 @@
 ---
 layout: page
 title: Publications
-subtitle: Check out my Publications!
+subtitle: Explore my contributions to AI and medical imaging research
 ---
-
-## 📚 Publications  
-
-> *Explore my contributions to AI and medical imaging research.*  
 
 ### 🏆 **Automatic Classification of Preliminary Diabetic Retinopathy Stages using CNN**  
 📅 *Published in:* **The Science and Information (SAI) Organization** – *April 1, 2021*  
