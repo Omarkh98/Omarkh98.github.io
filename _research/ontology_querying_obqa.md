@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: project
 title: Ontology Querying & OBQA
 subtitle: Exploring advanced ontology querying techniques
+tags: [Ontology, Knowledge Representation, SPARQL, OWL-DL, OBQA, Semantic Web, Query Answering]
 ---
 
 ## 📚 Research
