@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Publications & Research
-subtitle: Check out my Publications and Research
+title: Publications
+subtitle: Check out my Publications!
 ---
 
 ## 📚 Publications  
@@ -32,4 +32,4 @@ subtitle: Check out my Publications and Research
 
 ---
 
-✨ *More research coming soon... Stay tuned!* 🚀  
+✨ *More publications coming soon... Stay tuned!* 🚀  
