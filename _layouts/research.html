@@ -1,1 +1,128 @@
+---
+layout: page
+title: Research Topics
+---
 
+{{ content }}
+
+<!-- Research Topics Container -->
+<div class="research-container">
+  {% for research in site.research %}
+  <div class="research-item">
+    <article>
+      <div class="research-content">
+        <div class="research-text">
+          <!-- Research Title & Subtitle -->
+          <a href="{{ research.url | absolute_url }}">
+            <h2 class="research-title">{{ research.title | strip_html }}</h2>
+            {% if research.subtitle %}
+              <h3 class="research-subtitle">{{ research.subtitle | strip_html }}</h3>
+            {% endif %}
+          </a>
+
+          <!-- Research Meta (Date) -->
+          <p class="research-meta">
+            <strong>Published on:</strong> {{ research.date | date: "%B %-d, %Y" }}
+          </p>
+
+          <!-- Research Excerpt -->
+          <div class="research-description">
+            {% assign excerpt_length = site.excerpt_length | default: 50 %}
+            {{ research.excerpt | strip_html | truncatewords: excerpt_length }}
+            {% assign excerpt_word_count = research.excerpt | number_of_words %}
+            {% if research.content != research.excerpt or excerpt_word_count > excerpt_length %}
+              <a href="{{ research.url | absolute_url }}" class="read-more">Read More</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Tags -->
+      {% if research.tags.size > 0 %}
+      <div class="research-tags">
+        <strong>Keywords:</strong>
+        <ul class="tags-list">
+          {% for tag in research.tags %}
+          <li>
+            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">#{{- tag -}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </article>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Custom Styles -->
+<style>
+  .research-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+  }
+  .research-item {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  .research-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .research-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .research-text {
+    padding: 15px;
+    flex: 1;
+  }
+  .research-title {
+    font-size: 24px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  .research-meta {
+    font-size: 14px;
+    color: gray;
+  }
+  .research-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .read-more {
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  .research-tags {
+    padding: 10px 15px;
+    background: #e9ecef;
+  }
+  .tags-list {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  .tags-list li a {
+    background: #343a40;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .tags-list li a:hover {
+    background: #212529;
+  }
+</style>
