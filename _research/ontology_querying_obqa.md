@@ -5,8 +5,6 @@ subtitle: Exploring advanced ontology querying techniques
 tags: [Ontology, Knowledge Representation, SPARQL, OWL-DL, OBQA, Semantic Web, Query Answering]
 ---
 
-## 📚 Research
-
 ### 🧠 **An Overview on Ontology Querying – A Closer Look Into Ontology-Based Query Answering (OBQA)**
 📅 *Presented at:* **Seminar – Knowledge Representation and Processing (SWuV), FAU** – *March 25, 2025*  
 🔗 **[Read the Full Paper](#)** (Add actual link if available)  
