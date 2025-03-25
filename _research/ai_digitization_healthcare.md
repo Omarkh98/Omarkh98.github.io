@@ -5,8 +5,6 @@ subtitle: The impact of AI and emerging technologies in modern healthcare
 tags: [AI in Healthcare, Digital Health, Telemedicine, IoMT, 3D Bioprinting, Robotics, EHR, Healthcare Innovation]
 ---
 
-## 📚 Research
-
 ### 🏥 **Analyzing the Role of New Technologies and Their Impact on Healthcare Systems**  
 📅 *Presented at:* **Seminar – AI and Digitization in Healthcare, FAU** – *March 2025*  
 🔗 **[Read the Full Paper](#)** (Add actual link if available)  
