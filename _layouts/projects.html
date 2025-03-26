@@ -5,150 +5,60 @@ title: Projects
 
 {{ content }}
 
-<!-- Projects Flex Container -->
+<!-- Projects Section -->
 <div class="projects-container">
   {% for project in site.projects %}
-  <div class="project-item">
-    <article>
-      <div class="project-content">
-        <!-- Project Thumbnail -->
-        {%- capture thumbnail -%}
-          {% if project.thumbnail-img %}
-            {{ project.thumbnail-img }}
-          {% elsif project.cover-img %}
-            {% if project.cover-img.first %}
-              {{ project.cover-img[0].first.first }}
-            {% else %}
-              {{ project.cover-img }}
-            {% endif %}
-          {% endif %}
-        {% endcapture %}
-        {% assign thumbnail = thumbnail | strip %}
-
-        {% if thumbnail != "" %}
-        <div class="project-thumbnail">
-          <a href="{{ project.url | absolute_url }}" aria-label="Thumbnail">
-            <img src="{{ thumbnail | absolute_url }}" alt="Project thumbnail">
-          </a>
-        </div>
-        {% endif %}
-
-        <div class="project-text">
-          <!-- Project Title & Subtitle -->
-          <a href="{{ project.url | absolute_url }}">
-            <h2 class="project-title">{{ project.title | strip_html }}</h2>
-            {% if project.subtitle %}
-              <h3 class="project-subtitle">{{ project.subtitle | strip_html }}</h3>
-            {% endif %}
-          </a>
-
-          <!-- Project Meta (Date) -->
-          <p class="project-meta">
-            <strong>Created on:</strong> {{ project.date | date: "%B %-d, %Y" }}
-          </p>
-
-          <!-- Project Excerpt -->
-          <div class="project-description">
-            {% assign excerpt_length = site.excerpt_length | default: 50 %}
-            {{ project.excerpt | strip_html | truncatewords: excerpt_length }}
-            {% assign excerpt_word_count = project.excerpt | number_of_words %}
-            {% if project.content != project.excerpt or excerpt_word_count > excerpt_length %}
-              <a href="{{ project.url | absolute_url }}" class="read-more">Read More</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Tags -->
-      {% if project.tags.size > 0 %}
-      <div class="project-tags">
-        <strong>Tags:</strong>
-        <ul class="tags-list">
-          {% for tag in project.tags %}
-          <li>
-            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">#{{- tag -}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-    </article>
-  </div>
+    <div class="project-item">
+      <article>
+        <!-- Project Title -->
+        <h2 class="project-title">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h2>
+        <!-- Project Excerpt -->
+        <p class="project-excerpt">{{ project.excerpt }}</p>
+      </article>
+    </div>
   {% endfor %}
 </div>
 
-<!-- Custom Styles -->
 <style>
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 20px;
-  }
-  .project-item {
-    display: flex;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  .project-item:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  .project-content {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  .project-thumbnail img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-  }
-  .project-text {
-    padding: 15px;
-    flex: 1;
-  }
-  .project-title {
-    font-size: 22px;
-    margin: 5px 0;
-  }
-  .project-meta {
-    font-size: 14px;
-    color: gray;
-  }
-  .project-description {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .read-more {
-    font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-  }
-  .read-more:hover {
-    text-decoration: underline;
-  }
-  .project-tags {
-    padding: 10px 15px;
-    background: #f9f9f9;
-  }
-  .tags-list {
-    display: flex;
-    gap: 5px;
-    list-style: none;
-    padding: 0;
-  }
-  .tags-list li a {
-    background: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 12px;
-  }
-  .tags-list li a:hover {
-    background: #0056b3;
-  }
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.project-title a {
+  text-decoration: none;
+  color: #4CAF50; /* Green color */
+  transition: color 0.3s ease;
+}
+
+.project-title a:hover {
+  color: #388E3C; /* Darker green on hover */
+}
+
+.project-excerpt {
+  color: #555;
+  margin-top: 10px;
+}
 </style>
