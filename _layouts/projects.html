@@ -5,60 +5,94 @@ title: Projects
 
 {{ content }}
 
-<!-- Projects Section -->
 <div class="projects-container">
   {% for project in site.projects %}
-    <div class="project-item">
-      <article>
-        <!-- Project Title -->
-        <h2 class="project-title">
-          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-        </h2>
-        <!-- Project Excerpt -->
-        <p class="project-excerpt">{{ project.excerpt }}</p>
-      </article>
+    <div class="project-box">
+      <a href="{{ project.url | relative_url }}">
+        {% if project.thumbnail-img %}
+          <img src="{{ project.thumbnail-img | relative_url }}" alt="{{ project.title }}" class="project-thumbnail">
+        {% endif %}
+        <h3 class="project-title">{{ project.title }}</h3>
+      </a>
+      {% if project.subtitle %}
+        <p class="project-subtitle">{{ project.subtitle }}</p>
+      {% endif %}
+      <p class="project-excerpt">{{ project.excerpt }}</p>
+      {% if project.tags %}
+        <p class="project-tags">
+          {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </p>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
 
 <style>
+  /* Projects Container */
 .projects-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-.project-item {
-  background-color: #f9f9f9;
+/* Project Box */
+.project-box {
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
+  width: 300px;
   padding: 20px;
-  transition: box-shadow 0.3s ease;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Project Title */
 .project-title {
   margin-top: 0;
-  font-size: 1.5em;
-}
-
-.project-title a {
-  text-decoration: none;
-  color: #4CAF50; /* Green color */
+  color: #e67e22; /* Orange */
+  font-size: 1.4em;
   transition: color 0.3s ease;
 }
 
-.project-title a:hover {
-  color: #388E3C; /* Darker green on hover */
+.project-title:hover {
+  color: #ca6f1e;
 }
 
+/* Project Subtitle */
+.project-subtitle {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Project Excerpt */
 .project-excerpt {
   color: #555;
+  font-size: 0.95em;
+  margin: 10px 0;
+}
+
+/* Tags */
+.project-tags {
   margin-top: 10px;
+}
+
+.project-tags .tag {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 0.85em;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin: 3px;
 }
 </style>
