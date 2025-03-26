@@ -100,8 +100,6 @@ navbar-var-length: false
 collections:
   projects:
     output: true
-
-collections:
   research:
     output: true
 
