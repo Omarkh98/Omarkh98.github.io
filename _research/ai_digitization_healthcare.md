@@ -7,7 +7,7 @@ tags: [AI in Healthcare, Digital Health, Telemedicine, IoMT, 3D Bioprinting, Rob
 
 ### 🏥 **Analyzing the Role of New Technologies and Their Impact on Healthcare Systems**  
 📅 *Presented at:* **Seminar – AI and Digitization in Healthcare, FAU** – *March 2025*  
-🔗 **[Read the Full Paper](#)** (Add actual link if available)  
+🔗 **[Read the Full Paper](#)**
 
 📝 **Abstract:**  
 This research explores how **technological advancements** have **transformed healthcare**, enhancing **patient care, medical practices, and system efficiency**. It traces the **historical evolution** of health technologies, examines the **impact of emerging innovations** like **telemedicine, electronic health records (EHRs), AI, robotics, and IoMT**, and discusses future trends such as **3D bioprinting**. The study also addresses **ethical, legal, and cost-related challenges** that policymakers and healthcare professionals must navigate.  
