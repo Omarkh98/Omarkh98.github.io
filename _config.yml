@@ -101,6 +101,10 @@ collections:
   projects:
     output: true
 
+collections:
+  research:
+    output: true
+
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
 
